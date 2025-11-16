@@ -7,7 +7,8 @@ from chatterbox_vllm.tts import ChatterboxTTS
 from pathlib import Path
 model_path = Path("./ResembleAI/chatterbox")
 if __name__ == "__main__":
-    model = ChatterboxTTS.from_pretrained(
+    model = ChatterboxTTS.from_local(
+        model_path,
         max_batch_size = 3,
         max_model_len = 1000,
     )
