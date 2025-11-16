@@ -4,7 +4,8 @@ from typing import List
 import torchaudio as ta
 from chatterbox_vllm.tts import ChatterboxTTS
 
-
+from pathlib import Path
+model_path = Path("./ResembleAI/chatterbox")
 if __name__ == "__main__":
     model = ChatterboxTTS.from_pretrained(
         max_batch_size = 3,
